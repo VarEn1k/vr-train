@@ -189,12 +189,22 @@ class App {
 
         function showQuestion() {
             // Subtask 1.2 Show question slide
+            const question = self.questions.questions[questionIndex];
+            self.ui.updateElement("header", "Heather")
+            self.ui.updateElement("panel", question.text)
+            self.ui.updateConfig("prev", "display", "none");
+            self.ui.updateConfig("next", "display", "none");
+            self.playSound(questionSounds[`option${questionIndex + 1}`]);
 
         }
 
         function showScore() {
             // Subtask 2.2 Prepare show score slide
-
+            self.ui.updateElement("header", "Results")
+            self.ui.updateElement("panel", `Your score: ${score}`)
+            self.ui.updateConfig("prev", "display", "none")
+            self.ui.updateConfig("next", "display", "none")
+            self.playSound(successSound)
         }
 
         function onPrev() {
@@ -209,7 +219,6 @@ class App {
 
         function onContinue() {
             // Subtask 2.4.b Show intro after score slide
-
             if (questionIndex < 0) {
                 //Coming from intro
                 questionIndex = 0;
@@ -226,11 +235,11 @@ class App {
                 questionIndex = question.options[answerIndex].next;
 
                 // Subtask 2.3 Calculate score
-
+                score += question.options[answerIndex].score ?? 0
 
                 if (questionIndex === -1) {
                     // Subtask 2.4.a Show score after last slide
-                    showIntro()
+                    showScore()
                 } else {
                     answerIndex = -1;
                     showQuestion();
@@ -317,7 +326,16 @@ class App {
 
     playSound(soundName) {
         // Subtask 1.1 Load a sound and set it as the Audio object's buffer
+        const sound = this.speech;
 
+        const audioLoader = new THREE.AudioLoader();
+        audioLoader.load(soundName, (buffer) =>{
+            if (sound.isPlaying)sound.stop();
+            sound.setBuffer(buffer);
+            sound.setLoop(false)
+            sound.setVolume(1.0)
+            sound.play();
+        });
     }
 
     setupXR() {
