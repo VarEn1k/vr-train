@@ -2,7 +2,8 @@ import * as THREE from 'three';
 import {LoadingBar} from "./utils/LoadingBar";
 
 import {RGBELoader} from "three/addons/loaders/RGBELoader";
-import hospital_room from "../assets/hospital-room.glb"
+import hospital_room from "../assets/school.glb"
+//import hospital_room from "../assets/hospital-room.glb"
 import Stats from "three/addons/libs/stats.module";
 import {getGltfLoader} from "./utils/loaderUtils";
 import {VRButton} from "./utils/VRButton";
@@ -12,7 +13,7 @@ import {CanvasUI} from "./utils/CanvasUI";
 import venice_sunset_environment from "../assets/hdr/venice_sunset_1k.hdr"
 import questions from "../assets/questions.json"
 import atmosSound from "../assets/audio/atmos.mp3"
-import introSound from "../assets/audio/intro.mp3"
+import introSound from "../assets/audio/audio1/intro.mp3"
 
 // Subtask 1.4. Import questions sounds
 import option1 from "../assets/audio/option1.mp3"
@@ -128,12 +129,12 @@ class App {
                 self.scene.add(room);
                 self.room = room;
 
-                const animation = gltf.animations[1];
-                const details = animation.name.split('|');
-                const patient = room.getObjectByName(details[0]);
-                self.mixer = new THREE.AnimationMixer(patient);
-                const action = self.mixer.clipAction(gltf.animations[1]);
-                action.play();
+                // const animation = gltf.animations[1];
+                // const details = animation.name.split('|');
+                // const patient = room.getObjectByName(details[0]);
+                // self.mixer = new THREE.AnimationMixer(patient);
+                // const action = self.mixer.clipAction(gltf.animations[1]);
+                // action.play();
 
                 self.loadingBar.visible = false;
 
@@ -190,7 +191,7 @@ class App {
         function showQuestion() {
             // Subtask 1.2 Show question slide
             const question = self.questions.questions[questionIndex];
-            self.ui.updateElement("header", "Heather")
+            self.ui.updateElement("header", "Quiz Bot")
             self.ui.updateElement("panel", question.text)
             self.ui.updateConfig("prev", "display", "none");
             self.ui.updateConfig("next", "display", "none");
@@ -427,6 +428,7 @@ class App {
 
         this.renderer.setAnimationLoop(this.render.bind(this));
     }
+
 
     handleController(controller) {
         this.workingMatrix.identity().extractRotation(controller.matrixWorld);

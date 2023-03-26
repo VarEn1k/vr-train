@@ -1,70 +1,105 @@
 {
-  "intro": "Your patient is connected to a ventilator, with multiple IVs and a tracheostomy. He needs trach care, Foley catheter care, dressings changed, IV medications given, and his ventilator settings adjusted. Some of these procedures are new to you. Heather is an experienced nurse on your unit.",
+  "intro": "Welcome to today's quiz! Today's topic is math. Let's get started.",
   "questions": [
     {
       "id": "Q0",
-      "text": "You took care of this patient yesterday with me. Today you’re on your own, because I’m very busy with my own patients.",
+      "text": "What is the value of x in the equation 3x + 5 = 14?",
       "options": [
         {
-          "text": "I’m very comfortable doing the trach and foley care, and I’ve changed his_dressings several times so I feel very confident doing that on my own. But I’m not sure about the vent settings. I need some help with that.",
+          "text": "3",
           "next": 1,
-          "score": 100
+          "score": 1
         },
         {
-          "text": "Sorry, I'm not supposed to be here.",
-          "next": -1
+          "text": "5",
+          "next": 2
         },
         {
-          "text": "I can see how crazy things are today. I’ll grab one of the other new nurses to help me since they don’t have a full patient assignment either.",
+          "text": "4",
           "next": 2
         }
       ]
     },
     {
       "id": "Q1",
-      "text": "I’m too busy. You’re just going to have to figure it out on your own.",
+      "text": "Correct! You earned 1 point. Next one. What is the value of pi to the nearest hundredth? ",
       "options": [
         {
-          "text": "How about if I call Eric in respiratory; he said to call if I ever needed assistance. Maybe he can come up and review the vent with me.",
-          "score": 100,
+          "text": "3.14",
+          "score": 1,
           "next": 3
         },
         {
-          "text": "You can’t just leave me on my own. You’re my preceptor. You’re supposed to help me when I need it, and I’m telling you, I need help with this patient.",
+          "text": "3.41",
+          "next": 4
+        },
+        {
+          "text": "3.11",
+          "score": 0,
           "next": 4
         }
       ]
     },
     {
       "id": "Q2",
-      "text": "You should be fine. You didn’t have any problems yesterday. Have more confidence in yourself. I’ll check in with you later to make sure everything is ok.",
+      "text": "Incorrect! You can try again",
       "options": [
         {
-          "text": "That would be great. Thanks for the vote of confidence.",
+          "text": "Ok",
           "score": 0,
-          "next": -1
+          "next": 0
         }
       ]
     },
     {
       "id": "Q3",
-      "text": "I think that’s a good plan. He is an excellent resource. You may also want to ask Dr. Grayson. He usually makes rounds in the morning, and he loves teaching. I’m sure he would be happy to review the vent settings with you and answer any other questions you might have.",
+      "text": "Excellent! You earned another point. Next one. What is the square root of 121? ",
       "options": [
         {
-          "text": "Great! Thank you for that advice.",
+          "text": "11",
+          "score": 1,
+          "next": 5
+        },{
+          "text": "12",
+          "score": 0,
+          "next": 6
+        },{
+          "text": "13",
+          "score": 0,
+          "next": 6
+        }
+      ]
+    },
+    {
+      "id": "Q4",
+      "text": "Incorrect! You can try again. You will start from the last question.",
+      "options": [
+        {
+          "text": "Ok",
+          "score": 0,
+          "next": 1
+        }
+      ]
+    },
+    {
+      "id": "Q5",
+      "text": "Perfect! You earned a total of 3 points out of 3. Congratulations! You completed the quiz. Thanks for playing. You can start again",
+      "options": [
+        {
+          "text": "Ok. I will start again.",
           "score": 0,
           "next": -1
         }
       ]
     },
     {
-      "id": "Q4",
-      "text": "You’re a nurse now, not a student. You can’t always be looking for someone to hold your hand and do things for you. I went over everything with you yesterday. If you were smart enough to pass your nursing boards, you should be smart enough to remember what I taught you yesterday.",
+      "id": "Q6",
+      "text": "Incorrect! You can try again. You will start from last question question.",
       "options": [
         {
-          "text": "OK, if that’s the way you feel.",
+          "text": "Ok",
           "score": 0,
-          "next": -1
+          "next": 3
         }
       ]
     }
