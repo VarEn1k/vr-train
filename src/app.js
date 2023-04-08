@@ -12,15 +12,16 @@ import {CanvasUI} from "./utils/CanvasUI";
 
 import venice_sunset_environment from "../assets/hdr/venice_sunset_1k.hdr"
 import questions from "../assets/questions.json"
-import atmosSound from "../assets/audio/atmos.mp3"
+import atmosSound from "../assets/audio/audio1/birds.mp3"
 import introSound from "../assets/audio/audio1/intro.mp3"
 
 // Subtask 1.4. Import questions sounds
-import option1 from "../assets/audio/option1.mp3"
-import option2 from "../assets/audio/option2.mp3"
-import option3 from "../assets/audio/option3.mp3"
-import option4 from "../assets/audio/option4.mp3"
-import option5 from "../assets/audio/option5.mp3"
+import option1 from "../assets/audio/audio1/Question0.mp3"
+import option2 from "../assets/audio/audio1/Question1.mp3"
+import option3 from "../assets/audio/audio1/Question2.mp3"
+import option4 from "../assets/audio/audio1/Question3.mp3"
+import option5 from "../assets/audio/audio1/Question4.mp3"
+import option6 from "../assets/audio/audio1/Question5.mp3"
 
 const questionSounds = {
     option1: option1,
@@ -28,6 +29,7 @@ const questionSounds = {
     option3: option3,
     option4: option4,
     option5: option5,
+    option6: option6
 }
 
 import successSound from "../assets/audio/success.mp3"
